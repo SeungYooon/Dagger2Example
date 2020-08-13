@@ -2,17 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dagger2example">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-<!--    application 을 singleton 이라 보고 후에 외부에서 생성되는 객체를 주입하는 인젝터 생성을 끝낸다.-->
     <application
-        android:name=".App"
+        android:name=".MyRetroApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.RetroActivity" />
+        <activity android:name=".ui.NetworkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
